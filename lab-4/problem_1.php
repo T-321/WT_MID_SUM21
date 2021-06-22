@@ -33,8 +33,8 @@
     $gender = "";
     $err_gender = "";
 
-    $aboutUs=[];
-	$err_aboutUs="";
+    $information=[];
+	$err_information="";
 
     $bio="";
 	$err_bio="";
@@ -44,16 +44,16 @@
     $months = array("January","February","March","April","May","June","July","August","September","October","November","December");
 
     
-    function aboutUsExist($aboutus){
-		global $aboutUs;
-		foreach($aboutUs as $h){
-			if($h == $aboutus) return true;
+    function informationExist($aboutus){
+		global $information;
+		foreach($information as $h){
+			if($h == $information) return true;
 		}
 		return false;
 	}
 
     
-    function isNumberExist($value){
+    function doesisNumberExist($value){
 
         $len = strlen($value);
 
@@ -67,7 +67,7 @@
     }
 
     
-    function upperCaseExist($value){
+    function doesupperCaseExist($value){
         
         $len = strlen($value);
 
@@ -82,7 +82,7 @@
     }
 
     
-    function lowerCaseExist($value){
+    function doeslowerCaseExist($value){
         
         $len = strlen($value);
 
@@ -428,12 +428,12 @@
                     <tr>
 					<td>Where did you here about us?</td>
 					<td>
-                    <input type="checkbox" name="aboutUs[]" <?php if(aboutUsExist("A Friend Or Colleague")) echo "checked";?> value="A Friend Or Colleague"><b>A Friend Or Colleague</b><br>
-                    <input type="checkbox" name="aboutUs[]" <?php if(aboutUsExist("Google")) echo "checked";?> value="Google"> <b> Google </b><br>
-                    <input type="checkbox" name="aboutUs[]" <?php if(aboutUsExist("Blog Post")) echo "checked";?> value="Blog Post"> <b> Blog Post </b><br>
-                    <input type="checkbox" name="aboutUs[]" <?php if(aboutUsExist("New Article")) echo "checked";?> value="New Article"> <b> New Article </b><br>
+                    <input type="checkbox" name="information[]" <?php if(informationExist("A Friend Or Colleague")) echo "checked";?> value="A Friend Or Colleague"><b>A Friend Or Colleague</b><br>
+                    <input type="checkbox" name="information[]" <?php if(informationExist("Google")) echo "checked";?> value="Google"> <b> Google </b><br>
+                    <input type="checkbox" name="information[]" <?php if(informationExist("Blog Post")) echo "checked";?> value="Blog Post"> <b> Blog Post </b><br>
+                    <input type="checkbox" name="information[]" <?php if(informationExist("New Article")) echo "checked";?> value="New Article"> <b> New Article </b><br>
 					</td>
-					<td><span> <?php echo $err_aboutUs;?> </span></td>
+					<td><span> <?php echo $err_information;?> </span></td>
 				    </tr>
                     <tr>
 					<td>Bio :</td>
